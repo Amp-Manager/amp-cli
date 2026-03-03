@@ -1,25 +1,24 @@
 
 <p align="center">
-  <picture align="center">
+  <picture>
     <img src="favicon/amp-angie-mariadb-php-ssl.png" alt="AMP Docker Angie, MariaDB, PHP, SSL" style="width:840px; height:auto">
   </picture>
 </p>
 <p align="center">
-<picture>
-  <img src="favicon/4x4.png" alt="Overview" style="width:800px; height:32px">
-</picture>
+  <picture>
+    <img src="favicon/4x4.png" alt="Overview" style="width:800px; height:32px">
+  </picture>
 </p>
 <p align="center">
-    <img src="favicon/amp-manager-screenshot.png" alt="Amp Manager" style="width:640px; height:auto">
+  <img src="favicon/amp-manager-screenshot.png" alt="Amp Manager" style="width:640px; height:auto">
 </p>
 
-<div style="text-align:center;">
-  <h3 align="center">AMP Manager — Angie, MariaDB and PHP</h3>
-  <p align="center"><b>Docker-based Dev Stack with Trusted SSL for Windows</b></p>
-  <picture align="center">
-  <img src="favicon/4x4.png" alt="Overview" style="width:800px; height:32px">
-</picture
-</div>
+<h3 align="center">AMP Manager — Angie, MariaDB and PHP</h3>
+<p align="center"><b>Docker-based Dev Stack with Trusted SSL for Windows</b></p>
+<picture align="center">
+<img src="favicon/4x4.png" alt="Overview" style="width:800px; height:32px">
+</picture>
+
 
 <div style="text-align:center;">
   <p align="center">From Code Consumers to Stack Architects<br> 
@@ -42,7 +41,7 @@ REM
 > That is how you really learn.
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 **Your Local Dev Environment**
 
@@ -50,9 +49,12 @@ Follow these steps in order to build your first project.
 
 ### 1. Preparation
 
-* **Download:** Clone the repository or download the ZIP and extract it to a folder (e.g., `D:\amp\`).
-* **Launch Docker:** Open Docker Desktop and ensure the engine is running.
-* **Boot the Stack:** Open a terminal in your project folder and run:
+* **Download:**   
+  Clone the repository or download the ZIP and extract it to a folder e.g. `D:\amp\`
+* **Launch Docker:**   
+  Open Docker Desktop and ensure the engine is running.
+* **Boot the Stack:**   
+  Open a terminal in your project folder and run:
 
 ```bash
 docker compose up -d
