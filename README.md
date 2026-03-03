@@ -42,6 +42,52 @@ REM
 > That is how you really learn.
 ```
 
+You are spot on—the current draft assumes the user already has everything running, which is the "Junior Dev" mistake in documentation. Beginners need a **linear path** from nothing to their first green light.
+
+For the **v1.11.3** release, we should rewrite this as a "Mission Log" or a "Quick Start Roadmap." It needs to be authoritative yet encouraging.
+
+### The "Architect's" Revised Getting Started
+
+---
+
+## 🚀 Quick Start
+
+**Your Local Dev Environment**
+
+Follow these steps in order to build your first project.
+
+### 1. Preparation
+
+* **Download:** Clone the repository or download the ZIP and extract it to a folder (e.g., `D:\amp\`).
+* **Launch Docker:** Open Docker Desktop and ensure the engine is running.
+* **Boot the Stack:** Open a terminal in your project folder and run:
+
+```bash
+docker compose up -d
+```
+
+### 2. The AMP-MANAGER Setup
+
+Run **`AMP-MANAGER.bat`** as Administrator. This tool is the "Architect" of your environment.
+
+* **Install CA:** On the first run, it installs your **Certificate Authority**. This allows your browser to trust your local `.local` sites with green SSL locks.
+* **Add Your First Site:** Select **[N] New Domain** and type `angie`.
+* *Note: The manager automatically adds `.local`, generates your SSL `.pem` files, and creates the server configuration.*
+
+
+### 3. Finalize & Browse
+
+* **Reload Angie:** For the server to see your new site configuration, from AMP-MANAGER, or restart the container:
+
+```bash
+docker restart angie
+```
+
+
+* **Visit the default angie.local:** Open your browser and go to **`https://angie.local`**.
+* This is your **Control Center** for documentation, health checks, and status monitoring.
+
+
 ## Overall Workflow
 ### How AMP-Manager enables local development
 This diagram shows the high-level workflow a student follows when using AMP-Manager:
