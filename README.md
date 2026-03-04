@@ -43,6 +43,11 @@ REM
 
 ## Features
 
+The juniors' reaction is common and understandable in 2026: they see React/TS/JS everywhere (frontend jobs, tutorials, hype), so when they read "MariaDB + PHP", their brain immediately translates it to "old-school LAMP stack, no modern JS, I can't use React". It sounds legit on the surface, but it's actually not a limitation at all, it's just a separation of concerns.
+
+Angie, MariaDB and PHP are just the backend. You can build a React, TypeScript, frontend that talks to it via APIs (REST or GraphQL).
+
+
 | Stack    | Description        |
 |----------|--------------------|
 | **AMP-Manager**| Open utility to scaffold .local domains, and generate certificate + config |
@@ -51,6 +56,18 @@ REM
 | **PHP** |  version 8.3.++, common extensions: mysqli, pdo_mysql, gd, zip, etc. |
 | **CA / SSL** |  **HTTPS** using **mkcert** for easy install a CA, and green lock all `.local` domains |
 
+- Frontend: React/TS/Vite/whatever you're using  
+- Backend: PHP (Laravel/Symfony or even plain) and MariaDB  
+- They communicate with fetch/axios, exactly like Node/Express would
+
+This is super common: tons of real apps (WordPress APIs, Laravel + React dashboards, e-commerce sites) do exactly this.  
+
+You're not 'stuck' in PHP for the UI, you're just using it for server logic, auth, DB queries.  
+
+> [!NOTE]
+> learning PHP backend teaches you fundamentals (routing, middleware, security, SQL) that transfer to any backend language later.
+
+So go ahead: write your React SPA, point it at PHP endpoints. Zero limitation, only more tools in your belt.
 
 ## Quick Start
 
