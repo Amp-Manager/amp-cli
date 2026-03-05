@@ -3,46 +3,18 @@ on:
   push:
     tags:
       - 'v*'
-
 permissions:
   contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Extract Changelog Section
-        id: changelog_reader
-        uses: actions/github-script@v7
-        with:
-          result-encoding: string
-          script: |
-            const fs = require('fs');
-            const changelog = fs.readFileSync('CHANGELOG.md', 'utf8');
-            const tag = context.ref.replace('refs/tags/', ''); // This gets 'v1.11.3'
-            const lines = changelog.split(/\r?\n/);
-            let output = [];
-            let found = false;
-
-            for (const line of lines) {
-              // Matches the EXACT tag including the 'v'
-              if (line.includes(tag)) {
-                found = true;
-                continue;
-              }
-              if (found && line.startsWith('##')) break;
-              if (found) output.push(line);
-            }
-            return output.join('\n').trim() || "Notes for " + tag + " not found.";
-
-      - name: Create Release
-        uses: softprops/action-gh-release@v2
+      - uses: actions/checkout@v4
+      - uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
-          body: ${{ steps.changelog_reader.outputs.result }}
+          body_path: Changelog.md
+          generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
