@@ -1,20 +1,43 @@
 name: Release
+
 on:
   push:
     tags:
       - 'v*'
+
 permissions:
   contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: softprops/action-gh-release@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract changelog section
+        id: changelog
+        run: |
+          TAG="${{ github.ref_name }}"
+          awk -v tag="$TAG" '
+            $0 ~ "^## \\["tag"\\]" {p=1; getline; next}
+            p && $0 ~ /^## / {p=0}
+            p {print}
+          ' Changelog.md > body.md
+
+          [ -s body.md ] || cp Changelog.md body.md
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
-          body_path: Changelog.md
+          body_path: body.md
+          draft: false
+          prerelease: false
           generate_release_notes: true
+          make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
