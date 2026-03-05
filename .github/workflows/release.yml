@@ -1,20 +1,24 @@
 name: Release
 on:
   push:
-    tags: 
-      - v[0-9]+.[0-9]+.[0-9]+
+    tags:
+      - 'v*'
+
 permissions:
   contents: write
+
 jobs:
   release:
-    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Create GitHub release
-        uses: docker://antonyurchenko/git-release:v5
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: "AMP v1.11.3 - Check CHANGELOG.md for details."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Update Tags
-        uses: vweevers/additional-tags-action@v2
