@@ -444,7 +444,7 @@ PHP 8.3 official security support ended December 31, 2025. To switch versions:
 ### ⚠️ Windows 11 Console Compatibility (Important)
 
 **AMP-MANAGER.bat** is set to CP850, but encoded with Estonian ISO 8859-13 characters, and ANSI color sequences to render the UI.     
-Microsoft as changed its Terminal on Windows 11, the console host occasionally switch code pages or rendering modes the breaks    
+Microsoft as _automated_ its Terminal on Windows 11, making the console host switch code pages or rendering modes the breaks    
 the UI. Try to close the Terminal, and reopen to reset its settings.  
 
 
