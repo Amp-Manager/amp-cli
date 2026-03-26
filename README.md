@@ -42,7 +42,7 @@ REM
 ```
 
 ## Features
-
+  
 The juniors' reaction is common and understandable: they see React/TS/JS everywhere (frontend jobs, tutorials, hype), so when they read "MariaDB + PHP", their brain immediately translates it to "old-school LAMP stack, no modern JS, I can't use React". It sounds legit on the surface, but it's actually not a limitation at all, it's just a separation of concerns.
 
 <p align="center">
@@ -78,6 +78,24 @@ You're not 'stuck' in PHP for the UI, you're just using it for server logic, aut
 > [!TIP]
 > Learning PHP backend teaches you fundamentals (routing, middleware, security, SQL) that transfer to any backend language later.  
 > So go ahead: write your React SPA, point it at PHP endpoints. Zero limitation, only more tools in your belt.
+
+
+<p align="center">
+  <picture>
+    <img src="favicon/4x4.png" alt="Overview" style="width:800px; height:32px">
+  </picture>
+</p>
+
+
+## 🖥️ Prefer a Visual Interface?
+
+AMP Manager is a desktop application that provides the same educational stack 
+with a click-and-run GUI. No terminal required, just install, click, and learn.
+
+[→ Download AMP Manager](https://amp-manager.dev)
+
+*Both tools are open, free, and designed to help students and juniors understand 
+how modern dev stacks work. Choose the interface that matches your learning style.*
 
 
 <p align="center">
