@@ -92,7 +92,7 @@ You're not 'stuck' in PHP for the UI, you're just using it for server logic, aut
 AMP Manager is a desktop application that provides the same educational stack 
 with a click-and-run GUI. No terminal required, just install, click, and learn.
 
-[→ Download AMP Manager](https://amp-manager.dev)
+[→ Download AMP Manager](https://github.com/amp-manager/amp-manager)
 
 *Both tools are open, free, and designed to help students and juniors understand 
 how modern dev stacks work. Choose the interface that matches your learning style.*
